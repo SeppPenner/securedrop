@@ -49,12 +49,12 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckod
 
 COPY requirements requirements
 RUN python3 -m venv /opt/venvs/securedrop-app-code && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install pip-tools && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install wheel && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install -r requirements/python3/test-requirements.txt && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install supervisor && \
-    /opt/venvs/securedrop-app-code/bin/pip3 install --upgrade setuptools  # Fixes #4036 pybabel requires latest version of setuptools
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user pip-tools && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user wheel && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user --require-hashes -r requirements/python3/securedrop-app-code-requirements.txt && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user -r requirements/python3/test-requirements.txt && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user supervisor && \
+    /opt/venvs/securedrop-app-code/bin/pip3 install --user --upgrade setuptools  # Fixes #4036 pybabel requires latest version of setuptools
 
 RUN if test $USER_NAME != root ; then useradd --no-create-home --home-dir /tmp --uid $USER_ID $USER_NAME && echo "$USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers ; fi && \
     cp -r /root/.local /tmp/ && chmod +x /tmp/.local/tbb/tor-browser_en-US/Browser/firefox && chmod -R 777 /tmp/.local && \
