@@ -8,7 +8,7 @@ dnspython
 flake8
 futures==3.2.0
 html-linter
-molecule>=2.20.1
+molecule>=2.22
 # Needed for ansible network filter
 # http://docs.ansible.com/ansible/latest/playbooks_filters_ipaddr.html
 netaddr
