@@ -120,6 +120,7 @@ virtualenv==16.7.5        # via pre-commit
 watchdog==0.8.3           # via sphinx-autobuild
 wcwidth==0.1.7            # via prompt-toolkit
 websocket-client==0.44.0  # via docker-py
+wheel==0.33.6
 whichcraft==0.4.1         # via cookiecutter
 wrapt==1.10.11            # via astroid
 yamllint==1.17.0
