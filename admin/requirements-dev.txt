@@ -178,7 +178,7 @@ six==1.11.0 \
 tox==2.9.1 \
     --hash=sha256:752f5ec561c6c08c5ecb167d3b20f4f4ffc158c0ab78855701a75f5cef05f4b8 \
     --hash=sha256:8af30fd835a11f3ff8e95176ccba5a4e60779df4d96a9dfefa1a1704af263225
-urllib3==1.25.3 \
+urllib3==1.25.8 \
     --hash=sha256:b246607a25ac80bedac05c6f282e3cdaf3afb65420fd024ac94435cabe6e18d1 \
     --hash=sha256:dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232
 virtualenv==15.1.0 \
